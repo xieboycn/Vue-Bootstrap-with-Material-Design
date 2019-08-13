@@ -1,48 +1,48 @@
 <template>
   <div id="app" class="flyout">
-    <navbar dark position="top" class="default-color" scrolling>
-      <mdb-navbar-brand href="#/" style="font-weight: bolder;">
+    <mdb-navbar id="main-navbar" dark position="top" color="stylish" scrolling :scrollingOffset="20">
+      <mdb-navbar-brand to="/" waves class="font-weight-bold">
         MDB Vue
       </mdb-navbar-brand>
-      <navbar-collapse>
-        <navbar-nav right>
-          <navbar-item href="#/" waves-fixed>Home</navbar-item>
-          <navbar-item href="#/css" waves-fixed>CSS</navbar-item>
-          <navbar-item href="#/components" waves-fixed>Components</navbar-item>
-          <navbar-item href="#/advanced" waves-fixed>Advanced</navbar-item>
-        </navbar-nav>
-      </navbar-collapse>
-    </navbar>
+      <mdb-navbar-toggler>
+        <mdb-navbar-nav right>
+          <mdb-nav-item exact to="/"><strong>Home</strong></mdb-nav-item>
+          <mdb-nav-item to="/css"><strong>CSS</strong></mdb-nav-item>
+          <mdb-nav-item to="/components"><strong>Components</strong></mdb-nav-item>
+          <mdb-nav-item to="/advanced"><strong>Advanced</strong></mdb-nav-item>
+          <mdb-nav-item to="/navigation"><strong>Navigation</strong></mdb-nav-item>
+          <mdb-nav-item to="/forms"><strong>Forms</strong></mdb-nav-item>
+          <mdb-nav-item to="/tables"><strong>Tables</strong></mdb-nav-item>
+          <mdb-nav-item to="/modals"><strong>Modals</strong></mdb-nav-item>
+          <mdb-nav-item to="/plugins"><strong>Plugins & addons</strong></mdb-nav-item>
+        </mdb-navbar-nav>
+      </mdb-navbar-toggler>
+    </mdb-navbar>
     <main :style="{marginTop: '60px'}">
-      <router-view></router-view>
+      <transition name="fade" mode="out-in">
+        <router-view></router-view>
+      </transition>
     </main>
-    <Ftr color="default-color">
+    <mdb-footer color="stylish-color">
       <p class="footer-copyright mb-0 py-3 text-center">
-        &copy; {{new Date().getFullYear()}} Copyright: <a href="https://www.MDBootstrap.com"> MDBootstrap.com </a>
+        &copy; {{new Date().getFullYear()}} Copyright: <a href="https://mdbootstrap.com/docs/vue/?utm_source=DemoApp&utm_medium=MDBVue"> MDBootstrap.com</a>
       </p>
-    </Ftr>
+    </mdb-footer>
   </div>
 </template>
 
 <script>
-import Navbar from '@/components/Navbar.vue';
-import NavbarItem from '@/components/NavbarItem.vue';
-import NavbarNav from '@/components/NavbarNav.vue';
-import NavbarCollapse from '@/components/NavbarCollapse.vue';
-import Ftr from '@/components/Footer.vue';
-import EdgHd from '@/components/EdgeHeader.vue';
-import mdbNavbarBrand from '@/components/NavbarBrand.vue';
+import { mdbNavbar, mdbNavItem, mdbNavbarNav, mdbNavbarToggler, mdbNavbarBrand, mdbFooter } from 'mdbvue';
 
 export default {
   name: 'app',
   components: {
-    Navbar,
-    NavbarItem,
-    NavbarNav,
-    NavbarCollapse,
-    Ftr,
-    EdgHd,
-    mdbNavbarBrand
+    mdbNavbar,
+    mdbNavItem,
+    mdbNavbarNav,
+    mdbNavbarToggler,
+    mdbNavbarBrand,
+    mdbFooter
   }
 };
 
@@ -55,5 +55,36 @@ export default {
 	min-height:100vh;
 	justify-content: space-between;
 }
+.active{
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.demo-section {
+  padding: 20px 0;
+}
+.demo-section > section {
+  border: 1px solid #e0e0e0;
+  padding: 15px;
+}
+.demo-section > h4 {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.demo-title {
+  color: #9e9e9e;
+  font-weight: 700;
+  margin-bottom: 0;
+  padding-left: 15px;
+}
 
+.fade-enter-active,
+.fade-leave-active {
+  transition-duration: 0.3s;
+  transition-property: opacity;
+  transition-timing-function: ease-out;
+}
+
+.fade-enter,
+.fade-leave-active {
+  opacity: 0;
+}
 </style>

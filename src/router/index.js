@@ -1,52 +1,90 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 
-// PAGES
-import CSSPage from '../docs/CSSPage';
-import ComponentsPage from '../docs/ComponentsPage';
-import AdvancedPage from '../docs/AdvancedPage';
+// CATEGORIES
+import CSSPage from '../docs/categories/CSSPage';
+import ComponentsPage from '../docs/categories/ComponentsPage';
+import AdvancedPage from '../docs/categories/AdvancedPage';
+import NavigationMenuPage from '../docs/categories/NavigationMenuPage';
+import FormsMenuPage from '../docs/categories/FormsMenuPage';
+import TablesPage from '../docs/categories/TablesPage';
+import ModalsPage from '../docs/categories/ModalsPage';
+import AddonsPage from '../docs/categories/AddonsPage';
 
 // FREE
-import HomePage from '../docs/HomePage';
+import AnimationsPage from '../docs/CSS/AnimationsPage';
+import AlertPage from '../docs/Components/AlertPage';
+import AccordionPage from '../docs/Advanced/AccordionPage';
+import BadgePage from '../docs/Components/BadgePage';
+import BackgroundImagePage from '../docs/CSS/BackgroundImagePage';
+import BlogComponentsPage from '../docs/Plugins/BlogComponentsPage';
+import ButtonPage from '../docs/Components/ButtonPage';
+import ButtonsGroupPage from '../docs/Components/ButtonsGroupPage';
+import BreadcrumbPage from '../docs/Navigation/BreadcrumbPage';
+import CardPage from '../docs/Components/CardPage';
+import CarouselPage from '../docs/Advanced/CarouselPage';
+import ChartPage from '../docs/Advanced/ChartPage';
+import CollapsePage from '../docs/Advanced/CollapsePage';
+import DataTablePage from '../docs/Tables/DataTablePage';
+import DataTableJSONPage from '../docs/Tables/DataTableJSONPage';
+import DropdownPage from '../docs/Components/DropdownPage';
+import EdgeHeaderPage from '../docs/Components/EdgeHeaderPage';
+import FaPage from '../docs/CSS/FaPage';
+import FooterPage from '../docs/Navigation/FooterPage';
+import FormsPage from '../docs/Forms/FormsPage';
+import GradientPage from '../docs/CSS/GradientPage';
+import GoogleMapsPage from '../docs/Advanced/GoogleMapsPage';
 import GridPage from '../docs/GridPage';
-import BadgePage from '../docs/BadgePage';
-import CardPage from '../docs/CardPage';
-import ButtonPage from '../docs/ButtonPage';
-import TablePage from '../docs/TablePage';
-import TableAdditionalPage from '../docs/TableAdditionalPage';
-import DataTablePage from '../docs/DataTablePage';
-import TableResponsivePage from '../docs/TableResponsivePage';
-import TablePaginationPage from '../docs/TablePaginationPage';
-import TableScrollPage from '../docs/TableScrollPage';
-import TableSearchPage from '../docs/TableSearchPage';
-import TableSortPage from '../docs/TableSortPage';
-import DropdownPage from '../docs/DropdownPage';
-import JumbotronPage from '../docs/JumbotronPage';
-import CarouselPage from '../docs/CarouselPage';
-import BreadcrumbPage from '../docs/BreadcrumbPage';
-import FaPage from '../docs/FaPage';
-import InputsPage from '../docs/InputsPage';
+import HamburgerMenuPage from '../docs/Navigation/HamburgerMenuPage';
+import HomePage from '../docs/HomePage';
+import HoverPage from '../docs/CSS/HoverPage';
+import IframePage from '../docs/Plugins/IframePage';
+import InputsPage from '../docs/Forms/InputsPage';
+import InputGroupPage from '../docs/Forms/InputGroupPage';
+import JumbotronPage from '../docs/Components/JumbotronPage';
 import LiveDemoPage from '../docs/LiveDemoPage';
-import MediaPage from '../docs/MediaPage';
-import ListGroupPage from '../docs/ListGroupPage';
-import NavbarPage from '../docs/NavbarPage';
-import NavigationPage from '../docs/NavigationPage';
-import CollapsePage from '../docs/CollapsePage';
-import PaginationPage from '../docs/PaginationPage';
-import PanelPage from '../docs/PanelPage';
-import ChartPage from '../docs/ChartPage';
-import ProgressBarsPage from '../docs/ProgressBarsPage';
-import TooltipPage from '../docs/TooltipPage';
-import PopoverPage from '../docs/PopoverPage';
-import EdgeHeaderPage from '../docs/EdgeHeaderPage';
-import MasksPage from '../docs/MasksPage';
-import HoverPage from '../docs/HoverPage';
-import VideoCarouselPage from '../docs/VideoCarouselPage';
-import ModalPage from '../docs/ModalPage';
-import FormsPage from '../docs/FormsPage';
-import SearchPage from '../docs/SearchPage';
-import ValidationPage from '../docs/ValidationPage';
-import FooterPage from '../docs/FooterPage';
+import ListGroupPage from '../docs/Components/ListGroupPage';
+import MasksPage from '../docs/CSS/MasksPage';
+import MediaPage from '../docs/Components/MediaPage';
+import ModalPage from '../docs/Modals/ModalPage';
+import ModalEventsPage from '../docs/Modals/ModalEventsPage';
+import ModalExamplesPage from '../docs/Modals/ModalExamplesPage';
+import ModalFormsPage from '../docs/Modals/ModalFormsPage';
+import ModalStylesPage from '../docs/Modals/ModalStylesPage';
+import SelectPageFree from '../docs/Forms/SelectPage';
+import NavsPage from '../docs/Navigation/NavsPage';
+import NavbarPage from '../docs/Navigation/NavbarPage';
+import NavigationPagev1 from '../docs/Navigation/NavigationPagev1';
+import NavigationPagev2 from '../docs/Navigation/NavigationPagev2';
+import NavigationPagev3 from '../docs/Navigation/NavigationPagev3';
+import NavigationPagev4 from '../docs/Navigation/NavigationPagev4';
+import PaginationPage from '../docs/Components/PaginationPage';
+import PanelPage from '../docs/Components/PanelPage';
+import PopoverPage from '../docs/Advanced/PopoverPage';
+import ProgressBarsPage from '../docs/Components/ProgressBarsPage';
+import SearchPage from '../docs/Forms/SearchPage';
+import CustomColorsScrollbarPage from '../docs/CSS/CustomColorsScrollbarPage';
+import SliderPage from '../docs/Components/SliderPage';
+import SpinnersPage from '../docs/Components/SpinnersPage';
+import TabsPage from '../docs/Components/TabsPage';
+import TablePage from '../docs/CSS/TablePage';
+import TableAdditionalPage from '../docs/CSS/TableAdditionalPage';
+import TableResponsivePage from '../docs/CSS/TableResponsivePage';
+import TablePaginationPage from '../docs/Tables/TablePaginationPage';
+import TableScrollPage from '../docs/Tables/TableScrollPage';
+import TableSearchPage from '../docs/Tables/TableSearchPage';
+import TableSortPage from '../docs/Tables/TableSortPage';
+import TooltipPage from '../docs/Advanced/TooltipPage';
+import ValidationPage from '../docs/Forms/ValidationPage';
+import VideoCarouselPage from '../docs/Advanced/VideoCarouselPage';
+import VideoPage from '../docs/Plugins/VideoPage';
+import WavesPage from '../docs/Advanced/WavesPage';
+import StretchedLinkPage from '../docs/Components/StretchedLinkPage';
+import NotificationsFreePage from '../docs/Advanced/NotificationsPage';
+import MasonryPage from '../docs/CSS/MasonryPage';
+import SwitchPage from '../docs/Forms/SwitchPage';
+import TreeviewPage from '../docs/Plugins/TreeviewPage';
+import RatingPage from '../docs/Plugins/RatingPage';
 
 Vue.use(Router);
 
@@ -58,7 +96,7 @@ export default new Router({
       component: HomePage
     },
 
-    // PAGES
+    // CATEGORIES
     {
       path: '/css',
       name: 'CSSPage',
@@ -72,12 +110,49 @@ export default new Router({
       name: 'AdvancedPage',
       component: AdvancedPage
     },
+    {
+      path: '/navigation',
+      name: 'NavigationMenuPage',
+      component: NavigationMenuPage
+    },
+    {
+      path: '/forms',
+      name: 'FormsMenuPage',
+      component: FormsMenuPage
+    },
+    {
+      path: '/tables',
+      name: 'TablesPage',
+      component: TablesPage
+    },
+    {
+      path: '/modals',
+      name: 'ModalsPage',
+      component: ModalsPage
+    },
+    {
+      path: '/plugins',
+      name: 'AddonsPage',
+      component: AddonsPage
+    },
 
     // FREE
     {
+      path: '/advanced/accordion',
+      name: 'AccordionPage',
+      component: AccordionPage
+    }, {
       path: '/components/badge',
       name: 'BadgePage',
       component: BadgePage
+    }, {
+      path: '/css/background',
+      name: 'BackgroundImagePage',
+      component: BackgroundImagePage
+    }, {
+      path: '/css/gradient',
+      name: 'GradientPage',
+      component: GradientPage
     }, {
       path: '/components/grid',
       name: 'GridPage',
@@ -91,6 +166,14 @@ export default new Router({
       name: 'ButtonPage',
       component: ButtonPage
     }, {
+      path: '/components/button-group',
+      name: 'ButtonsGroupPage',
+      component: ButtonsGroupPage
+    }, {
+      path: '/navigation/hamburger',
+      name: 'HamburgerMenuPage',
+      component: HamburgerMenuPage
+    }, {
       path: '/css/table',
       name: 'TablePage',
       component: TablePage
@@ -99,27 +182,39 @@ export default new Router({
       name: 'TableAdditionalPage',
       component: TableAdditionalPage
     }, {
-      path: '/advanced/datatable',
+      path: '/tables/datatable',
       name: 'DataTablePage',
       component: DataTablePage
     }, {
-      path: '/advanced/table-pagination',
+      path: '/tables/datatableJSON',
+      name: 'DataTableJSONPage',
+      component: DataTableJSONPage
+    }, {
+      path: '/plugins/iframe',
+      name: 'IframePage',
+      component: IframePage
+    }, {
+      path: '/tables/table-pagination',
       name: 'TablePaginationPage',
       component: TablePaginationPage
+    }, {
+      path: '/advanced/maps',
+      name: 'GoogleMapsPage',
+      component: GoogleMapsPage
     }, {
       path: '/css/table-responsive',
       name: 'TableResponsviePage',
       component: TableResponsivePage
     }, {
-      path: '/advanced/table-search',
+      path: '/tables/table-search',
       name: 'TableSearchPage',
       component: TableSearchPage
     }, {
-      path: '/advanced/table-sort',
+      path: '/tables/table-sort',
       name: 'TableSortPage',
       component: TableSortPage
     }, {
-      path: '/advanced/table-scroll',
+      path: '/tables/table-scroll',
       name: 'TableScrollPage',
       component: TableScrollPage
     }, {
@@ -127,7 +222,7 @@ export default new Router({
       name: 'DropdownPage',
       component: DropdownPage
     }, {
-      path: '/css/jumbotron',
+      path: '/components/jumbotron',
       name: 'JumbotronPage',
       component: JumbotronPage
     }, {
@@ -135,7 +230,7 @@ export default new Router({
       name: 'CarouselPage',
       component: CarouselPage
     }, {
-      path: '/components/breadcrumb',
+      path: '/navigation/breadcrumb',
       name: 'BreadcrumbPage',
       component: BreadcrumbPage
     }, {
@@ -147,9 +242,17 @@ export default new Router({
       name: 'FaPage',
       component: FaPage
     }, {
-      path: '/components/inputs',
+      path: '/css/scrollbar',
+      name: 'CustomColorsScrollbarPage',
+      component: CustomColorsScrollbarPage
+    }, {
+      path: '/forms/inputs',
       name: 'InputsPage',
       component: InputsPage
+    }, {
+      path: '/forms/group',
+      name: 'InputGroupPage',
+      component: InputGroupPage
     }, {
       path: '/components/liveDemo',
       name: 'LiveDemoPage',
@@ -163,13 +266,33 @@ export default new Router({
       name: 'ListGroupPage',
       component: ListGroupPage
     }, {
-      path: '/components/navbar',
+      path: '/navigation/navbar',
       name: 'NavbarPage',
       component: NavbarPage
     }, {
-      path: '/components/navigation',
-      name: 'NavigationPage',
-      component: NavigationPage
+      path: '/navigation/navs',
+      name: 'NavsPage',
+      component: NavsPage
+    }, {
+      path: '/navigation/navigation-v1',
+      name: 'NavigationPagev1',
+      component: NavigationPagev1
+    }, {
+      path: '/navigation/navigation-v2',
+      name: 'NavigationPagev2',
+      component: NavigationPagev2
+    }, {
+      path: '/navigation/navigation-v3',
+      name: 'NavigationPagev3',
+      component: NavigationPagev3
+    }, {
+      path: '/navigation/navigation-v4',
+      name: 'NavigationPagev4',
+      component: NavigationPagev4
+    }, {
+      path: '/components/alerts',
+      name: 'AlertPage',
+      component: AlertPage
     }, {
       path: '/advanced/collapse',
       name: 'CollapsePage',
@@ -207,7 +330,7 @@ export default new Router({
       name: 'MasksPage',
       component: MasksPage
     }, {
-      path: '/advanced/validation',
+      path: '/forms/validation',
       name: 'ValidationPage',
       component: ValidationPage
     }, {
@@ -215,21 +338,94 @@ export default new Router({
       name: 'VideoCarouselPage',
       component: VideoCarouselPage
     }, {
-      path: '/advanced/modal',
+      path: '/modals/modal',
       name: 'ModalPage',
       component: ModalPage
     }, {
-      path: '/components/forms',
+      path: '/modals/events',
+      name: 'ModalEventsPage',
+      component: ModalEventsPage
+    }, {
+      path: '/modals/examples',
+      name: 'ModalExamplesPage',
+      component: ModalExamplesPage
+    }, {
+      path: '/modals/forms',
+      name: 'ModalFormsPage',
+      component: ModalFormsPage
+    }, {
+      path: '/modals/styles',
+      name: 'ModalStylesPage',
+      component: ModalStylesPage
+    }, {
+      path: '/components/slider',
+      name: 'SliderPage',
+      component: SliderPage
+    }, {
+      path: '/forms/forms',
       name: 'FormsPage',
       component: FormsPage
     }, {
-      path: '/components/search',
+      path: '/forms/search',
       name: 'SearchPage',
       component: SearchPage
     }, {
-      path: '/components/footer',
+      path: '/navigation/footer',
       name: 'FooterPage',
       component: FooterPage
-    }
+    }, {
+      path: '/components/tabs',
+      name: 'TabsPage',
+      component: TabsPage
+    }, {
+      path: '/forms/select',
+      name: 'SelectPageFree',
+      component: SelectPageFree
+    }, {
+      path: '/plugins/video',
+      name: 'VideoPage',
+      component: VideoPage
+    }, {
+      path: '/plugins/treeview',
+      name: 'TreeviewPage',
+      component: TreeviewPage
+    },{
+      path: '/components/spinners',
+      name: 'SpinnersPage',
+      component: SpinnersPage
+    }, {
+      path: '/plugins/blog-components',
+      name: 'BlogComponentsPage',
+      component: BlogComponentsPage
+    }, {
+      path: '/advanced/wave-effect',
+      name: 'WavesPage',
+      component: WavesPage
+    }, {
+      path: '/css/animations',
+      name: 'AnimationsPage',
+      component: AnimationsPage
+    }, {
+      path: '/components/stretched-link',
+      name: 'StretchedLinkPage',
+      component: StretchedLinkPage
+    }, {
+      path: '/advanced/notifications',
+      name: 'NotificationsFreePage',
+      component: NotificationsFreePage
+    },{
+      path: '/css/masonry',
+      name: 'MasonryPage',
+      component: MasonryPage
+    }, {
+      path: '/forms/switch',
+      name: 'SwitchPage',
+      component: SwitchPage
+    },{
+      path: '/plugins/rating',
+      name: 'RatingPage',
+      component: RatingPage
+    },
+    
   ]
 });
